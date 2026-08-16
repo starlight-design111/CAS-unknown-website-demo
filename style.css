@@ -2,12 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
-    --bg-dark: #121212;
-    --panel-bg: rgba(20, 20, 20, 0.90);
     --border-color: #ffffff;
-    --text-color: #f0f0f0;
+    --text-color: #ffffff;
     --accent-color: #ffcc00;
-    --scroll-bar: #8b0000;
+    --panel-bg: rgba(15, 20, 35, 0.90);
 }
 
 * {
@@ -18,7 +16,9 @@
 
 body {
     font-family: 'Press Start 2P', monospace;
-    background-color: var(--bg-dark);
+    /* Gradient: Very dark blue at the top fading to pitch black at the bottom */
+    background: linear-gradient(to bottom, #0a1128 0%, #000000 100%);
+    background-attachment: fixed;
     color: var(--text-color);
     font-size: 10px;
     line-height: 1.8;
@@ -55,7 +55,7 @@ header {
     text-decoration: none;
     border: 2px solid var(--border-color);
     padding: 10px 15px;
-    background-color: #222;
+    background-color: #1a1a2e;
     font-size: 9px;
 }
 

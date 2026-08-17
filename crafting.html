@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crafting recipes and community modding submissions for Casualties Unknown.">
+    <title>Crafting Hub - Casualties: Unknown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Header Navigation Section -->
+    <header>
+        <div class="logo">CAS: UNKNOWN</div>
+        <div class="nav-buttons">
+            <a href="index.html">Survival</a>
+            <a href="medical.html">Medical</a>
+            <a href="crafting.html" class="active">Crafting</a>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <div class="main-container">
+        <!-- Sidebar with Site Information -->
+        <aside class="sidebar">
+            <h2>About Site</h2>
+            <p>Summary of the game and the function of this website. Submit your custom community mods and feedback below.</p>
+        </aside>
+
+        <!-- Crafting and User Form Panel -->
+        <section class="content-box">
+            <h1>Crafting & Community Modding Hub</h1>
+            <p>Discover basic workbench recipes and submit your own custom community tools or plugin concepts.</p>
+
+            <!-- Crafting Guides Section (Add your expert game crafting recipes here) -->
+            <h2>Workbench Recipes & Materials</h2>
+            <p>List your essential crafting recipes, component requirements, and survival equipment builds here.</p>
+
+            <!-- Community Mod Submission Form -->
+            <h2>Submit a Custom Mod / Tip</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="modname">Mod / Strategy Name:</label>
+                    <input type="text" id="modname" name="modname" required>
+                </div>
+                <div>
+                    <label for="author">Author Handle:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div>
+                    <label for="details">Description / Guide:</label>
+                    <textarea id="details" name="details" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit Entry</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>&copy; 2026 Casualties: Unknown Fan Resource Portal</p>
+    </footer>
+
+</body>
+</html>

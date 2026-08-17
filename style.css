@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /* Global Reset and Theme Colors */
 body {
     background-color: #0b0c16; /* Background - Dark Blue / Near Black */
     color: #ffffff;            /* Text - White */
-    font-family: monospace;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
@@ -19,10 +23,10 @@ header {
 
 .logo {
     color: #ffcc00;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
     border: 2px solid #ffcc00;
-    padding: 5px 10px;
+    padding: 8px 12px;
 }
 
 .nav-buttons a {
@@ -32,7 +36,7 @@ header {
     padding: 8px 16px;
     margin-left: 10px;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 10px;
 }
 
 .nav-buttons a:hover, .nav-buttons a.active {
@@ -43,7 +47,7 @@ header {
 /* Expanded Main Container Layout */
 .main-container {
     display: flex;
-    max-width: 1400px; /* Increased width from default to give way more room */
+    max-width: 1400px;
     margin: 30px auto;
     padding: 0 20px;
     gap: 30px;
@@ -60,18 +64,25 @@ header {
 
 .sidebar h2 {
     color: #ffcc00;
+    font-size: 13px;
     margin-top: 0;
 }
 
 /* Content Box Styling */
 .content-box {
-    flex: 3; /* Gives the main content area much more horizontal space */
+    flex: 3;
     background-color: #0b0c16;
     border: 2px solid #ffcc00;
     padding: 30px;
 }
 
-.content-box h1, .content-box h2 {
+.content-box h1 {
+    font-size: 15px;
+    color: #ffcc00;
+}
+
+.content-box h2 {
+    font-size: 13px;
     color: #ffcc00;
 }
 
@@ -82,4 +93,5 @@ footer {
     border-top: 2px solid #ffcc00;
     margin-top: 40px;
     color: #ffffff;
+    font-size: 10px;
 }

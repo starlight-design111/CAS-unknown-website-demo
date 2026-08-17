@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+    font-family: 'GameFont';
+    src: url('gamefont.ttf') format('truetype');
+}
 
 /* Global Reset and Theme Colors */
 body {
     background-color: #0b0c16; /* Background - Dark Blue / Near Black */
     color: #ffffff;            /* Text - White */
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'GameFont', monospace;
     font-size: 11px;
     line-height: 1.6;
     margin: 0;
@@ -23,7 +26,7 @@ header {
 
 .logo {
     color: #ffcc00;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     border: 2px solid #ffcc00;
     padding: 8px 12px;
@@ -64,7 +67,7 @@ header {
 
 .sidebar h2 {
     color: #ffcc00;
-    font-size: 13px;
+    font-size: 12px;
     margin-top: 0;
 }
 
@@ -77,12 +80,12 @@ header {
 }
 
 .content-box h1 {
-    font-size: 15px;
+    font-size: 14px;
     color: #ffcc00;
 }
 
 .content-box h2 {
-    font-size: 13px;
+    font-size: 12px;
     color: #ffcc00;
 }
 
@@ -93,5 +96,5 @@ footer {
     border-top: 2px solid #ffcc00;
     margin-top: 40px;
     color: #ffffff;
-    font-size: 10px;
+    font-size: 9px;
 }

@@ -1,13 +1,36 @@
 @font-face {
-    font-family: 'GameFont';
-    src: url('pixely[1].ttf') format('truetype');
+    font-family: 'Dogica';
+    src: url('dogica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DogicaBold';
+    src: url('dogicabold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DogicaPixel';
+    src: url('dogicapixel.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DogicaPixelBold';
+    src: url('dogicapixelbold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 /* Global Reset and Theme Colors */
 body {
     background-color: #0b0c16; /* Background - Dark Blue / Near Black */
     color: #ffffff;            /* Text - White */
-    font-family: 'GameFont', monospace;
+    font-family: 'Dogica', monospace;
     font-size: 11px;
     line-height: 1.6;
     margin: 0;
@@ -26,6 +49,7 @@ header {
 
 .logo {
     color: #ffcc00;
+    font-family: 'DogicaPixelBold', monospace;
     font-size: 14px;
     font-weight: bold;
     border: 2px solid #ffcc00;
@@ -39,6 +63,7 @@ header {
     padding: 8px 16px;
     margin-left: 10px;
     text-decoration: none;
+    font-family: 'DogicaBold', monospace;
     font-size: 10px;
 }
 
@@ -67,6 +92,7 @@ header {
 
 .sidebar h2 {
     color: #ffcc00;
+    font-family: 'DogicaPixelBold', monospace;
     font-size: 12px;
     margin-top: 0;
 }
@@ -80,11 +106,13 @@ header {
 }
 
 .content-box h1 {
+    font-family: 'DogicaPixelBold', monospace;
     font-size: 14px;
     color: #ffcc00;
 }
 
 .content-box h2 {
+    font-family: 'DogicaPixelBold', monospace;
     font-size: 12px;
     color: #ffcc00;
 }

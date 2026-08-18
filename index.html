@@ -3,41 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Survival hub and mechanics overview for Casualties Unknown.">
-    <title>Survival Hub - Casualties: Unknown</title>
+    <title>Casualties: Unknown - Survival Hub</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .volume-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            color: #ffcc00;
+        }
+        .volume-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100px;
+            height: 6px;
+            background: #ffcc00;
+            border-radius: 3px;
+            outline: none;
+        }
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            border: 2px solid #ffcc00;
+        }
+        .volume-slider::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            border: 2px solid #ffcc00;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">CAS: UNKNOWN</div>
-        <div class="nav-buttons">
+        <div class="header-left">
+            <div class="logo">CAS: UNKNOWN</div>
+            <div class="volume-container">
+                <label for="vol-slider">VOL:</label>
+                <input type="range" id="vol-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.5" oninput="document.getElementById('bg-audio').volume = this.value;">
+            </div>
+        </div>
+
+        <nav class="nav-buttons">
             <a href="index.html" class="active">Survival</a>
             <a href="medical.html">Medical</a>
             <a href="crafting.html">Crafting</a>
-        </div>
+        </nav>
     </header>
 
     <div class="main-container">
         <aside class="sidebar">
-            <h2>SURVIVAL OVERVIEW</h2>
-            <p>Welcome to Casualties unknown (scav project). This game is an extremly hard game on par with games like noita. There are many elements of this game that WILL kill you if your not carful with your Expie. This site aims to help prevent your casualty from being unknown to actually living and wining!</p>
+            <h2>Status Feed</h2>
+            <p>Monitor real-time sector telemetry and environmental hazards.</p>
         </aside>
 
-        <section class="content-box">
-            <h1>Survival Hub: Basic Tactics</h1>
-            <p>Welcome to the core survival guidelines for Casualties: Unknown.</p>
+        <main class="content-box">
+            <h1>Survival Hub</h1>
+            <p>Welcome back, operative. Current sector conditions remain unstable. Review core metrics and telemetry below.</p>
             
-            <h2>Basic Survival</h2>
-            <p>Your expie consists of a lot of stats. Things like your body weight, water and food amound, total Leters of blood, blood presure, blood viscosity, brain health, and more. Learning to manage these stats(to the best of your abilites) can lead to many good runs and keeping your expie alive. The biggest thing to keep in mind is that all things you do in the game that are physical can use stamina, and being in the wrong position with no stamina will lead to certain death, being paitent is very important for survival. There is also keybinds (1, 2, and 3) to speed up time so you dont have to wait 30 min to heal your broken arm.</p>
-            
-            <!-- Glup Reaction Image (.png) -->
-            <img src="glup.png" alt="Expie Glup Reaction" style="width: 100%; height: auto; margin-top: 20px; border: 2px solid #ffffff;">
-        </section>
+            <div style="margin: 20px 0;">
+                <img src="survival-banner.png" alt="Survival Environment View" style="max-width: 100%; border: 2px solid #ffcc00;">
+            </div>
+
+            <h2>Core Telemetry</h2>
+            <p>Maintain optimal vitals to avoid environmental degradation and hostile engagement penalties.</p>
+        </main>
     </div>
 
     <footer>
-        <p>&copy; 2026 Casualties: Unknown Fan Resource Portal</p>
+        <p>Now Playing: <strong>CASUALTIES UNKNOWN OST</strong></p>
+        <audio id="bg-audio" controls loop style="margin-top: 10px; width: 250px;">
+            <source src="Gaze Into the Pit OST [Casualties_ Unknown] [S….mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="margin-top: 15px;">&copy; 2026 Casualties: Unknown Project. All rights reserved.</p>
     </footer>
 
 </body>

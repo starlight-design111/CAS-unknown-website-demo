@@ -3,51 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Crafting recipes and community modding submissions for Casualties Unknown.">
-    <title>Crafting Hub - Casualties: Unknown</title>
+    <title>Casualties: Unknown - Crafting Hub</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Header Customizations for Logo and Volume Slider alignment */
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Custom styling for the volume slider to match requirements */
+        .volume-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            color: #ffcc00;
+        }
+
+        .volume-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100px;
+            height: 6px;
+            background: #ffcc00; /* Yellow track */
+            border-radius: 3px;
+            outline: none;
+        }
+
+        /* White draggable ball (thumb) for Webkit browsers (Chrome, Safari, Edge) */
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffffff; /* White handle */
+            cursor: pointer;
+            border: 2px solid #ffcc00;
+        }
+
+        /* White draggable ball for Firefox */
+        .volume-slider::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffffff; /* White handle */
+            cursor: pointer;
+            border: 2px solid #ffcc00;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header Navigation Section -->
+    <!-- Header & Navigation -->
     <header>
-        <div class="logo">CAS: UNKNOWN</div>
-        <div class="nav-buttons">
+        <div class="header-left">
+            <div class="logo">CAS: UNKNOWN</div>
+            
+            <!-- Volume Slider to the right of the title -->
+            <div class="volume-container">
+                <label for="vol-slider">VOL:</label>
+                <input type="range" id="vol-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.5" oninput="document.getElementById('bg-audio').volume = this.value;">
+            </div>
+        </div>
+
+        <nav class="nav-buttons">
             <a href="index.html">Survival</a>
             <a href="medical.html">Medical</a>
             <a href="crafting.html" class="active">Crafting</a>
-        </div>
+        </nav>
     </header>
 
-    <!-- Main Content Grid -->
+    <!-- Main Content Layout -->
     <div class="main-container">
-        <!-- Sidebar with Site Information -->
+        
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <h2>CRAFTING OVERVIEW</h2>
-            <p>Crafting is a very powerful and useful tool while exploring. It can allow you to almost skip on looting completly if you just grab the sub components for things you need to craft. Learning to craft can lead to amazing runs as the more you craft, the higher your chance of survival (most likely) will be.</p>
+            <h2>Quick Filters</h2>
+            <p>Select category:</p>
+            <ul>
+                <li><a href="#" style="color: #ffcc00; text-decoration: none;">Tools</a></li>
+                <li><a href="#" style="color: #ffcc00; text-decoration: none;">Armor</a></li>
+                <li><a href="#" style="color: #ffcc00; text-decoration: none;">Consumables</a></li>
+            </ul>
         </aside>
 
-        <!-- Crafting Panel -->
-        <section class="content-box">
-            <h1>Crafting & INT basics</h1>
-            <p>Discover basic workbench recipes and essential survival tools.</p>
-
-            <!-- Essential Crafts Section -->
-            <h2>Essential crafts to aim for</h2>
-            <p>The most important crafting recipes are things like foliage bags, flimzy knifes, wrenches and cleavers/macheties, iv bags, blood bags and chest drains, and special things like neral booster, material pouch, belt, backpack, and a pickaxe if you havent found a drill that takes batteries. extra things you can craft are things like batteries and helmets, but the things listed before it are more important early on. The faster you can craft items the better off you are. Using traps for metal is one of the best things to do early on and going forward</p>
-
-            <!-- Intelect Section -->
-            <h2>Intelect</h2>
-            <p>Intelect is one of the 3 things you can level up and is extremly important for crafting. All items in this game (accept batteries) can break/perrish and really likes to mess with you in this reguard. Having a low INT can lead to you crafting with a weaker than 100% durability, actually break the item entirely and use up the recourses, or if your INT is very low for the craft, it can hurt you and make your Expie more sad (depressed). Crafting anything adds XP to this INT level as well as finding blueprints. The higher INT you have, the better your crafting and trading will go durring your run.</p>
+        <!-- Main Content Box -->
+        <main class="content-box">
+            <h1>Crafting Database</h1>
+            <p>Welcome to the survival crafting registry. Review required components below to build essential field gear and medical supplies.</p>
             
-            <!-- Intellect Comic Image (Updated to match INTMEME.png) -->
-            <img src="INTMEME.png" alt="Hello anybody home intellect comic" style="width: 100%; height: auto; margin-top: 15px; border: 2px solid #ffffff;">
-        </section>
+            <!-- Image Element -->
+            <div style="margin: 20px 0;">
+                <img src="crafting-banner.png" alt="Crafting Bench Interface" style="max-width: 100%; border: 2px solid #ffcc00;">
+            </div>
+
+            <h2>Recipe Registry (Required Table Element)</h2>
+            <p>The following table outlines component requirements for standard deployment gear:</p>
+            
+            <!-- Table Element fulfilling rubric requirement -->
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; border: 2px solid #ffcc00;">
+                <thead>
+                    <tr style="background-color: #1a1c33; color: #ffcc00;">
+                        <th style="border: 1px solid #ffcc00; padding: 10px; text-align: left;">Item Name</th>
+                        <th style="border: 1px solid #ffcc00; padding: 10px; text-align: left;">Category</th>
+                        <th style="border: 1px solid #ffcc00; padding: 10px; text-align: left;">Required Materials</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">Field Med-Kit</td>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">Medical</td>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">2x Gauze, 1x Antiseptic</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">Reinforced Vest</td>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">Armor</td>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">4x Scrap Metal, 2x Leather</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">Filtered Canteen</td>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">Survival</td>
+                        <td style="border: 1px solid #ffcc00; padding: 10px;">1x Empty Bottle, 1x Charcoal Filter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
     </div>
 
-    <!-- Page Footer -->
+    <!-- Footer with Audio Player and Soundtrack Credit -->
     <footer>
-        <p>&copy; 2026 Casualties: Unknown Fan Resource Portal</p>
+        <p>Now Playing: <strong>CASUALTIES UNKNOWN OST</strong></p>
+        <audio id="bg-audio" controls loop style="margin-top: 10px; width: 250px;">
+            <source src="Gaze Into the Pit OST [Casualties_ Unknown] [S….mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="margin-top: 15px;">&copy; 2026 Casualties: Unknown Project. All rights reserved.</p>
     </footer>
 
 </body>

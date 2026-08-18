@@ -3,50 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Medical treatments and injury management database for Casualties Unknown.">
-    <title>Medical Hub - Casualties: Unknown</title>
+    <title>Casualties: Unknown - Medical Hub</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .volume-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 10px;
+            color: #ffcc00;
+        }
+        .volume-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100px;
+            height: 6px;
+            background: #ffcc00;
+            border-radius: 3px;
+            outline: none;
+        }
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            border: 2px solid #ffcc00;
+        }
+        .volume-slider::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            border: 2px solid #ffcc00;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">CAS: UNKNOWN</div>
-        <div class="nav-buttons">
+        <div class="header-left">
+            <div class="logo">CAS: UNKNOWN</div>
+            <div class="volume-container">
+                <label for="vol-slider">VOL:</label>
+                <input type="range" id="vol-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.5" oninput="document.getElementById('bg-audio').volume = this.value;">
+            </div>
+        </div>
+
+        <nav class="nav-buttons">
             <a href="index.html">Survival</a>
             <a href="medical.html" class="active">Medical</a>
             <a href="crafting.html">Crafting</a>
-        </div>
+        </nav>
     </header>
 
     <div class="main-container">
         <aside class="sidebar">
-            <h2>MEDICAL OVERVIEW</h2>
-            <p>The medical aspects of this game are by far the most overwhelming part of the game and is also the most stressfull, but with proper knowlage, you can (mostly) keep everything under control. Staying calm in dire situations can lead to your survival!.</p>
+            <h2>Triage Units</h2>
+            <p>Access trauma response logs and infection status reports.</p>
         </aside>
 
-        <section class="content-box">
-            <h1>Medical Hub: Injury & Treatment Database</h1>
-            <p>Reference guide for managing injuries and status effects.</p>
+        <main class="content-box">
+            <h1>Medical Triage Database</h1>
+            <p>Review injury classifications, chemical exposure guidelines, and pharmaceutical stabilization protocols.</p>
+            
+            <div style="margin: 20px 0;">
+                <img src="medical-banner.png" alt="Medical Bay Interface" style="max-width: 100%; border: 2px solid #ffcc00;">
+            </div>
 
-            <h2>Injury Status Guide</h2>
-            <p>Injurys can vary from case to case but the most important thing is knowing what to fix first, your heart and brain are the most important. After that it would be bleeding as you should never go below 3 - 2.5L of blood ever. Then anticeptic would be next as you dont want an infection to pop up while fixing other things. After that you can do things like remove shrapnel, you can bandage over shrapnel to reduce how much you bleed while slowly pulling the peices out of your body. dislocations and broken bones are the absolute last as they dont cause any life threatening issues (in most cases)</p>
-            
-            <h2>Understanding Dislocation Mechanics</h2>
-            <p>There are many different ways of getting hurt so self preservation is the best strategy in this game. No falling head first on metal!</p>
-            
-            <!-- Dislocation Image -->
-            <img src="dislocation-guide.png" alt="Fix Dislocation Comic Guide" style="width: 100%; height: auto; margin-top: 15px; margin-bottom: 25px; border: 2px solid #ffffff;">
-
-            <h2>Status Moods Reference</h2>
-            <p>There are many moodles to determine the health of your Expie. Paying attention to them all can keep you alive a lot longer. Them more information you know the better.</p>
-            
-            <!-- Moodle Image with exact capitalized filename -->
-            <img src="MoodleImage.png" alt="What Moodle are you feeling today chart" style="width: 100%; height: auto; margin-top: 15px; border: 2px solid #ffffff;">
-        </section>
+            <h2>Trauma Management</h2>
+            <p>Immediate field treatment prevents systemic corruption. Ensure proper antiseptic application on laceration wounds.</p>
+        </main>
     </div>
 
     <footer>
-        <p>&copy; 2026 Casualties: Unknown Fan Resource Portal</p>
+        <p>Now Playing: <strong>CASUALTIES UNKNOWN OST</strong></p>
+        <audio id="bg-audio" controls loop style="margin-top: 10px; width: 250px;">
+            <source src="Gaze Into the Pit OST [Casualties_ Unknown] [S….mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="margin-top: 15px;">&copy; 2026 Casualties: Unknown Project. All rights reserved.</p>
     </footer>
 
 </body>

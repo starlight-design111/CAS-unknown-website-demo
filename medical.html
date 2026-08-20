@@ -87,5 +87,16 @@
         <p style="margin-top: 15px;">&copy; 2026 Casualties: Unknown Fan Resource Portal</p>
     </footer>
 
+    <script>
+        document.addEventListener('click', function() {
+            var audio = document.getElementById('bg-audio');
+            if (audio.paused) {
+                audio.play().catch(function(error) {
+                    console.log("Autoplay prevented:", error);
+                });
+            }
+        }, { once: true });
+    </script>
+
 </body>
 </html>

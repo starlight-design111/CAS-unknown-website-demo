@@ -6,47 +6,6 @@
     <meta name="description" content="Survival hub and mechanics overview for Casualties Unknown.">
     <title>Survival Hub - Casualties: Unknown</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .volume-container {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 10px;
-            color: #ffcc00;
-        }
-        .volume-slider {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100px;
-            height: 6px;
-            background: #ffcc00;
-            border-radius: 3px;
-            outline: none;
-        }
-        .volume-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: #ffffff;
-            cursor: pointer;
-            border: 2px solid #ffcc00;
-        }
-        .volume-slider::-moz-range-thumb {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: #ffffff;
-            cursor: pointer;
-            border: 2px solid #ffcc00;
-        }
-    </style>
 </head>
 <body>
 
@@ -79,14 +38,42 @@
             <h2>Basic Survival</h2>
             <p>Your expie consists of a lot of stats. Things like your body weight, water and food amound, total Leters of blood, blood presure, blood viscosity, brain health, and more. Learning to manage these stats(to the best of your abilites) can lead to many good runs and keeping your expie alive. The biggest thing to keep in mind is that all things you do in the game that are physical can use stamina, and being in the wrong position with no stamina will lead to certain death, being paitent is very important for survival. There is also keybinds (1, 2, and 3) to speed up time so you dont have to wait 30 min to heal your broken arm.</p>
             
-            <img src="glup.png" alt="Expie Glup Reaction" style="width: 100%; height: auto; margin-top: 20px; border: 2px solid #ffffff;">
+            <h2>Expie Status Reference Table</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Stat Name</th>
+                        <th>Critical Threshold</th>
+                        <th>Consequence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Blood Volume</td>
+                        <td>Below 2.5L - 3L</td>
+                        <td>Circulatory collapse / Death</td>
+                    </tr>
+                    <tr>
+                        <td>Stamina</td>
+                        <td>0</td>
+                        <td>Vulnerable to attacks / Stun</td>
+                    </tr>
+                    <tr>
+                        <td>Intellect (INT)</td>
+                        <td>Very Low</td>
+                        <td>Crafting failure / Depression</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <img src="glup.png" alt="Expie Glup Reaction">
         </section>
     </div>
 
     <footer>
         <p>Now Playing: <strong>CASUALTIES UNKNOWN OST</strong></p>
         <audio id="bg-audio" controls loop preload="auto" style="margin-top: 10px; width: 250px;">
-            <source src="https://raw.githubusercontent.com/starlight-design111/CAS-unknown-website-demo/main/CASunknownOST.mp3" type="audio/mpeg">
+            <source src="CASunknownOST.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         <p style="margin-top: 15px;">&copy; 2026 Casualties: Unknown Fan Resource Portal</p>

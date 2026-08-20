@@ -1,6 +1,8 @@
 @font-face {
     font-family: "dogica";
     src: url("dogica.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Global Font & Reset */

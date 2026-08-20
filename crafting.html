@@ -75,7 +75,7 @@
 
     <footer>
         <p>Now Playing: <strong>CASUALTIES UNKNOWN OST</strong></p>
-        <audio id="bg-audio" controls loop preload="auto" style="margin-top: 10px; width: 250px;">
+        <audio id="bg-audio" controls loop autoplay muted preload="auto" style="margin-top: 10px; width: 250px;">
             <source src="CASunknownOST.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
@@ -85,9 +85,10 @@
     <script>
         document.addEventListener('click', function() {
             var audio = document.getElementById('bg-audio');
-            if (audio.paused) {
+            if (audio.muted) {
+                audio.muted = false;
                 audio.play().catch(function(error) {
-                    console.log("Autoplay prevented:", error);
+                    console.log("Playback error:", error);
                 });
             }
         }, { once: true });

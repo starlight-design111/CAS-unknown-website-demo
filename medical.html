@@ -6,47 +6,6 @@
     <meta name="description" content="Medical treatments and injury management database for Casualties Unknown.">
     <title>Medical Hub - Casualties: Unknown</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .volume-container {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 10px;
-            color: #ffcc00;
-        }
-        .volume-slider {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100px;
-            height: 6px;
-            background: #ffcc00;
-            border-radius: 3px;
-            outline: none;
-        }
-        .volume-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: #ffffff;
-            cursor: pointer;
-            border: 2px solid #ffcc00;
-        }
-        .volume-slider::-moz-range-thumb {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: #ffffff;
-            cursor: pointer;
-            border: 2px solid #ffcc00;
-        }
-    </style>
 </head>
 <body>
 
@@ -79,15 +38,43 @@
             <h2>Injury Status Guide</h2>
             <p>Injurys can vary from case to case but the most important thing is knowing what to fix first, your heart and brain are the most important. After that it would be bleeding as you should never go below 3 - 2.5L of blood ever. Then anticeptic would be next as you dont want an infection to pop up while fixing other things. After that you can do things like remove shrapnel, you can bandage over shrapnel to reduce how much you bleed while slowly pulling the peices out of your body. dislocations and broken bones are the absolute last as they dont cause any life threatening issues (in most cases)</p>
             
+            <h2>Injury Priority Matrix</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Injury Type</th>
+                        <th>Priority Level</th>
+                        <th>Recommended Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Heart / Brain Trauma</td>
+                        <td>Highest (1)</td>
+                        <td>Immediate stabilizer use</td>
+                    </tr>
+                    <tr>
+                        <td>Severe Bleeding</td>
+                        <td>High (2)</td>
+                        <td>Apply tourniquet / Bandage</td>
+                    </tr>
+                    <tr>
+                        <td>Dislocations / Fractures</td>
+                        <td>Low (3)</td>
+                        <td>Address last after vitals secure</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <h2>Understanding Dislocation Mechanics</h2>
             <p>There are many different ways of getting hurt so self preservation is the best strategy in this game. No falling head first on metal!</p>
             
-            <img src="dislocation-guide.png" alt="Fix Dislocation Comic Guide" style="width: 100%; height: auto; margin-top: 15px; margin-bottom: 25px; border: 2px solid #ffffff;">
+            <img src="dislocation-guide.png" alt="Fix Dislocation Comic Guide">
 
             <h2>Status Moods Reference</h2>
             <p>There are many moodles to determine the health of your Expie. Paying attention to them all can keep you alive a lot longer. Them more information you know the better.</p>
             
-            <img src="MoodleImage.png" alt="What Moodle are you feeling today chart" style="width: 100%; height: auto; margin-top: 15px; border: 2px solid #ffffff;">
+            <img src="MoodleImage.png" alt="What Moodle are you feeling today chart">
         </section>
     </div>
 

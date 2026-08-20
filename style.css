@@ -157,6 +157,7 @@ footer {
     border: 1px solid #ffcc00;
     padding: 10px;
     text-align: left;
+    font-family: "dogica", monospace;
 }
 
 .data-table th {
